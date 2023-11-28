@@ -11,7 +11,7 @@ function AddEmployee() {
   let [ContractNumber, setContractNumber] = useState("");
   let [Place, setPlace] = useState("");
 
-  const notify = () => toast("Wow so easy!");
+  // const notify = () => toast("Wow so easy!");
 
   let handleSubmit = async () => {
     localStorage.setItem(
@@ -32,9 +32,14 @@ function AddEmployee() {
     console.log(formdata);
     let res = await axiosInstance.post("/api/post1//addEmployee", formdata);
     if (res.status === "200") {
-      notify();
+      toast.success("hugjggxjhghxfhxf")
+      // notify();
       sessionStorage.setItem("id", res.data.data._id);
       navigate("/dashboard/allEmployee");
+    }else{
+      // console.log(error);
+      toast.error('ivalidghvfhfdh')
+
     }
   };
 

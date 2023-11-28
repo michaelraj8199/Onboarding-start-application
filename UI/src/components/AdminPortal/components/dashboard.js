@@ -31,9 +31,9 @@ function Dashboard() {
             <div className=" ">
               <img classname="w_150" src={logo} alt="logo" />
             </div>
-            <div className="DisplayFlex aligncenter logoutbtn">
+            <div className="DisplayFlex aligncenter ">
               <div className="fs16px ">
-                <button onClick={() => logout()}>Logout </button>
+                <button className="logoutbtn" onClick={() => logout()}>Logout </button>
               </div>
 
               <img className=" ms-2" width="20px" src={logoout} alt="logoout" />
@@ -45,7 +45,7 @@ function Dashboard() {
             <div className="DisplayFlex aligncenter cursorptr wrapper_content side-wrapper_active">
               <img src={dashboardicon} alt="dashboardicon" />
 
-              <div className="ms-2 textnone ">Dashboard</div>
+              <div className="ms-2 textnone blackClr">Dashboard</div>
             </div>
             <div
               className="accordion accordion-flush width100_mob"
@@ -64,7 +64,7 @@ function Dashboard() {
                     <div>
                       <img src={employeeicon} alt="employeeicon" />
                     </div>
-                    <div className="ms-2 textnone">Employee</div>
+                    <div className="ms-2 textnone blackClr">Employee</div>
                   </button>
                 </h2>
 
@@ -83,7 +83,7 @@ function Dashboard() {
                     />
 
                     <div className="ms-2 ">
-                      <a href="/allemployee">Add Employee</a>
+                      <a href="/allemployee" className="blackClr">Add Employee</a>
                     </div>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ function Dashboard() {
                       alt="employeeedit"
                     />
 
-                    <div className="ms-2 textnone">Edit Employee</div>
+                    <div className="ms-2 textnone blackClr">Edit Employee</div>
                   </div>
                 </div>
                 <div
@@ -118,7 +118,7 @@ function Dashboard() {
                       alt="employeeall"
                     />
 
-                    <div className="ms-2 textnone">All Employees</div>
+                    <div className="ms-2 textnone blackClr">All Employees</div>
                   </div>
                 </div>
               </div>

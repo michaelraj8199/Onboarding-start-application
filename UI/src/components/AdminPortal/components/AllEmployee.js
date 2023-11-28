@@ -3,7 +3,11 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { axiosInstance } from "../../../request";
-
+// import BootstapTable from "react-bootstrap/table-next"
+import BootstrapTable from 'react-bootstrap-table-next';
+// import PaginationFactory from "react-bootstrap/lib/paginationfirst";
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import filterfactory from 'react-bootstrap-table2-filter';
 function AllEmployee() {
   let [employee, setemployee] = useState([]);
   useEffect(() => {
@@ -32,12 +36,16 @@ function AllEmployee() {
   return (
     <>
       {
-        <Table
+        <BootstrapTable
           striped
           bordered
           hover
+          sort
+          // keyField="id"
           className="text-light fw-normal"
           variant="dark"
+          pagination={paginationFactory()}
+          filter={filterfactory()}
         >
           <thead>
             <tr>
@@ -84,7 +92,7 @@ function AllEmployee() {
                 </tr>
               ))}
           </tbody>
-        </Table>
+        </BootstrapTable>
       }
     </>
   );
